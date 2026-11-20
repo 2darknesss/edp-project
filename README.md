@@ -9,7 +9,7 @@ Any modern web browser (Chrome, Firefox, Edge, Safari). Nothing to install.
 ## How to start
 1. Clone or download this repository:
    ```bash
-   git clone <your-repo-url>
+   git clone (https://github.com/2darknesss/edp-project)
    ```
 2. Open the file `index.html` in your browser (double-click it).
 3. Choose an item and quantity, click **Place order**, and watch the events flow through the system in the audit log and notifications.
