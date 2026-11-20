@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EDP – Event-Driven Order Processing</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    form { display: flex; gap: 8px; margin: 12px 0; }
+    select, input, button { padding: 8px; font-size: 16px; }
+    ul { list-style: none; padding: 0; font-family: monospace; font-size: 13px; }
+    li { padding: 4px 0; border-bottom: 1px solid #ddd; }
+    .ok { color: #1a7f37; font-weight: bold; }
+    .bad { color: #cf222e; font-weight: bold; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  </style>
+</head>
+<body>
+  <h1>Event-Driven Order Processing</h1>
+  <p>Stock: <b id="stock"></b></p>
+  <form id="orderForm">
+    <select id="item">
+      <option>laptop</option><option>phone</option><option>mouse</option>
+    </select>
+    <input id="quantity" type="number" min="1" value="1">
+    <button type="submit">Place order</button>
+  </form>
+  <div class="cols">
+    <div><h3>Notifications</h3><ul id="notifications"></ul></div>
+    <div><h3>Audit log (all events)</h3><ul id="audit"></ul></div>
+  </div>
+  <script src="js/eventBus.js"></script>
+  <script src="js/producers.js"></script>
+  <script src="js/handlers.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
